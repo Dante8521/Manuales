@@ -1,0 +1,39 @@
+Git manual starter
+
+#####################
+##Configuración Git##
+#####################
+Usar git bash
+git --version
+git config --global user.name "Nombre" - asignar nombre a git
+git config --global user.email "email" -- asignar email de git preferible usar el de github
+git config --global core.editor "code --wait" -- usar vscode como editor de texto
+git config --global -e ver que funcione vscode
+git config --global core.autocrlf input -- config salto de linea true(windows)/input(linux,mac)
+
+Comandos gitbash
+git init (dentro de la carpeta inicia un directorio)
+code . (abrir vscode de la carpeta)
+git status (ver estadio inicial y rama, se ve la mdificacion de algun archivo en rojo
+git add "archivo" se ve que ya esta en fase stage, aun por confirmar 
+git commit -m "mensaje"
+git rm "archivo" lo vuela
+git restore -stage "archivo" recupera del status 
+git restore "archivo" recupera el archivo
+Crear .env (configuracion o archivo que no se elimina)
+Crear .gitignore (archivo con restricciones de archivos o carpetas para no tocarse, se añade y sumite)
+git status -s la resumida
+git diff todos los cambios dispuestos a agregar resumidos
+git diff --staged 
+git log
+git log --oneline resumen de mensajes de cambios
+
+Ramas 
+git branch
+git checkout -b "rama" (crear rama)
+git checkout master (cambiar de rama)
+git merge "rama" (estando en la rama master)
+
+Conectarme con github
+git remote add origin "link repositorio" (especificar que hay un remoto de git) 
+git push -u origin master (subir cambios)
