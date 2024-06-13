@@ -120,3 +120,48 @@ class(z2)
 class(y)
 y <- as.numeric(y)
 class(y)
+
+#####################################
+### CLASE 5 - Models and Formulas ###
+#####################################
+
+dataset <- iris
+View(dataset)
+#Inicio y final
+head(dataset)
+tail(dataset)
+#filas
+nrow(dataset)
+#columnas
+ncol(dataset)
+#modelo simple linear
+petals.lm <- lm(formula = Petal.Length ~ Petal.Width, data = dataset)
+petals.lm
+
+summary(petals.lm)
+
+#####################################
+#### CLASE 6 - Grafiques&Cuadros ####
+#####################################
+
+#Cuadros y graficos
+
+names(iris)
+#histograma
+hist(iris$Sepal.Length)
+?hist
+#Mas barras
+hist(iris$Sepal.Length, breaks=25)
+#labels
+hist(iris$Sepal.Length, breaks=25, xlab = "nombrecito1", ylab= "nombrecito2", col="black", border="white", main= "histograma1")
+     
+library(lattice)
+
+dotplot(Sepal.Width ~ Sepal.Length | Species, data=iris)
+?dotplot
+dotplot(Petal.Length ~ Petal.Width | Species, data=iris)
+
+#####################################
+######## CLASE 7 - RMarkdown ########
+#####################################
+
